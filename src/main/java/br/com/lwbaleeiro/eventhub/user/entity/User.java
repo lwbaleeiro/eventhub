@@ -1,4 +1,4 @@
-package br.com.lwbaleeiro.eventhub.entity;
+package br.com.lwbaleeiro.eventhub.user.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -29,6 +29,7 @@ public class User implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private Role role;
+    private List<String> interests;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -1,4 +1,4 @@
-package br.com.lwbaleeiro.eventhub.entity.dto;
+package br.com.lwbaleeiro.eventhub.user.dto;
 
 import lombok.Builder;
 

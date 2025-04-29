@@ -1,6 +1,6 @@
-package br.com.lwbaleeiro.eventhub.repository;
+package br.com.lwbaleeiro.eventhub.user.repository;
 
-import br.com.lwbaleeiro.eventhub.entity.User;
+import br.com.lwbaleeiro.eventhub.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

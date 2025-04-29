@@ -1,4 +1,4 @@
-package br.com.lwbaleeiro.eventhub.service;
+package br.com.lwbaleeiro.eventhub.common.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.SignatureAlgorithm;

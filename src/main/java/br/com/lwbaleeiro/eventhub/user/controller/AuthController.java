@@ -1,9 +1,9 @@
-package br.com.lwbaleeiro.eventhub.controller;
+package br.com.lwbaleeiro.eventhub.user.controller;
 
-import br.com.lwbaleeiro.eventhub.entity.dto.AuthenticationRequest;
-import br.com.lwbaleeiro.eventhub.entity.dto.AuthenticationResponse;
-import br.com.lwbaleeiro.eventhub.entity.dto.RegisterRequest;
-import br.com.lwbaleeiro.eventhub.service.AuthenticationService;
+import br.com.lwbaleeiro.eventhub.user.dto.AuthenticationRequest;
+import br.com.lwbaleeiro.eventhub.user.dto.AuthenticationResponse;
+import br.com.lwbaleeiro.eventhub.user.dto.RegisterRequest;
+import br.com.lwbaleeiro.eventhub.user.services.AuthenticationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

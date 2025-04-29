@@ -1,6 +1,6 @@
-package br.com.lwbaleeiro.eventhub.service;
+package br.com.lwbaleeiro.eventhub.user.services;
 
-import br.com.lwbaleeiro.eventhub.repository.UserRepository;
+import br.com.lwbaleeiro.eventhub.user.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

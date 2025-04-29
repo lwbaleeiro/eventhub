@@ -1,6 +1,6 @@
 package br.com.lwbaleeiro.eventhub.config;
 
-import br.com.lwbaleeiro.eventhub.service.JwtService;
+import br.com.lwbaleeiro.eventhub.common.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,11 +1,12 @@
-package br.com.lwbaleeiro.eventhub.service;
+package br.com.lwbaleeiro.eventhub.user.services;
 
-import br.com.lwbaleeiro.eventhub.entity.Role;
-import br.com.lwbaleeiro.eventhub.entity.User;
-import br.com.lwbaleeiro.eventhub.entity.dto.AuthenticationRequest;
-import br.com.lwbaleeiro.eventhub.entity.dto.AuthenticationResponse;
-import br.com.lwbaleeiro.eventhub.entity.dto.RegisterRequest;
-import br.com.lwbaleeiro.eventhub.repository.UserRepository;
+import br.com.lwbaleeiro.eventhub.user.entity.Role;
+import br.com.lwbaleeiro.eventhub.user.entity.User;
+import br.com.lwbaleeiro.eventhub.user.dto.AuthenticationRequest;
+import br.com.lwbaleeiro.eventhub.user.dto.AuthenticationResponse;
+import br.com.lwbaleeiro.eventhub.user.dto.RegisterRequest;
+import br.com.lwbaleeiro.eventhub.user.repository.UserRepository;
+import br.com.lwbaleeiro.eventhub.common.service.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
