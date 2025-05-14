@@ -13,7 +13,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "notification")
+@Table(name = "event")
 public class Event {
 
     @Id

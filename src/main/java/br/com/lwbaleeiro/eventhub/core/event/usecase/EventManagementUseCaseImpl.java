@@ -19,11 +19,11 @@ public class EventManagementUseCaseImpl implements EventManagementUseCase {
 
     @Override
     public Event createEvent(Event event) {
-        return null;
+        return eventRepository.save(event);
     }
 
     @Override
     public List<Event> getAllEvents() {
-        return List.of();
+        return eventRepository.findAll();
     }
 }
