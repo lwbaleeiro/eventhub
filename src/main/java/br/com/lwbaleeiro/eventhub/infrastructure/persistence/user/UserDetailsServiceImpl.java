@@ -1,4 +1,4 @@
-package br.com.lwbaleeiro.eventhub.core.user.usecase;
+package br.com.lwbaleeiro.eventhub.infrastructure.persistence.user;
 
 import br.com.lwbaleeiro.eventhub.core.user.port.UserRepository;
 import jakarta.transaction.Transactional;

@@ -1,6 +1,6 @@
 package br.com.lwbaleeiro.eventhub.infrastructure.config;
 
-import br.com.lwbaleeiro.eventhub.core.user.usecase.UserDetailsServiceImpl;
+import br.com.lwbaleeiro.eventhub.infrastructure.persistence.user.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
