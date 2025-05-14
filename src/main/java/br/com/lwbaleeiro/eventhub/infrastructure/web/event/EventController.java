@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("api/event")
@@ -37,8 +36,33 @@ public class EventController {
 
         List<EventResponse> eventResponses = events.stream()
                 .map(eventMapper::toResponseDTO)
-                .collect(Collectors.toList());
+                .toList();
 
         return ResponseEntity.ok(eventResponses);
+    }
+
+    @GetMapping("/{eventId}")
+    public ResponseEntity<EventResponse> editEvent(@PathVariable("eventId") Long eventId) {
+
+        Event event = eventManagementUseCase.getEvent(eventId);
+
+        return ResponseEntity.ok(eventMapper.toResponseDTO(event));
+    }
+
+    @PutMapping("/edit")
+    public ResponseEntity<EventResponse> editEvent(@Valid @RequestBody EventRequest eventRequest) {
+
+        Event event = eventMapper.toDomain(eventRequest);
+        Event edited = eventManagementUseCase.editEvent(event);
+
+        return ResponseEntity.ok(eventMapper.toResponseDTO(edited));
+    }
+
+    @DeleteMapping("/{eventId}")
+    public ResponseEntity<String> deleteEvent(@PathVariable("eventId") Long eventId) {
+
+        eventManagementUseCase.deleteEvent(eventId);
+
+        return ResponseEntity.ok("Event deleted!");
     }
 }

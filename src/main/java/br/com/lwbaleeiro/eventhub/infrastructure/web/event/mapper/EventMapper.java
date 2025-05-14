@@ -10,7 +10,7 @@ public class EventMapper {
 
     public Event toDomain(EventRequest request) {
 
-        return new Event(null,
+        return new Event(request.id(),
                 request.title(),
                 request.description(),
                 request.category(),

@@ -5,7 +5,8 @@ import jakarta.validation.constraints.NotNull;
 
 import java.util.Date;
 
-public record EventRequest(@NotNull @NotBlank String title,
+public record EventRequest(Long id,
+                           @NotNull @NotBlank String title,
                            @NotNull @NotBlank String description,
                            @NotNull @NotBlank String category,
                            @NotNull Date date,

@@ -6,5 +6,8 @@ import java.util.List;
 
 public interface EventManagementUseCase {
     Event createEvent(Event event);
+    Event getEvent(Long id);
     List<Event> getAllEvents();
+    Event editEvent(Event event);
+    void deleteEvent(Long eventId);
 }
