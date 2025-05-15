@@ -2,6 +2,7 @@ package br.com.lwbaleeiro.eventhub.core.event.usecase;
 
 import br.com.lwbaleeiro.eventhub.core.event.model.Event;
 import br.com.lwbaleeiro.eventhub.core.event.port.EventRepository;
+import br.com.lwbaleeiro.eventhub.infrastructure.persistence.search.CachedEventSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,15 +14,21 @@ import java.util.Optional;
 public class EventManagementUseCaseImpl implements EventManagementUseCase {
 
     private final EventRepository eventRepository;
+    private final CachedEventSearchService cachedEventSearchService;
 
     @Autowired
-    public EventManagementUseCaseImpl(EventRepository eventRepository) {
+    public EventManagementUseCaseImpl(EventRepository eventRepository, CachedEventSearchService cachedEventSearchService) {
         this.eventRepository = eventRepository;
+        this.cachedEventSearchService = cachedEventSearchService;
     }
 
     @Override
     public Event createEvent(Event event) {
-        return eventRepository.save(event);
+        Event savedEvent = eventRepository.save(event);
+        //TODO: Alterar para usar Kafka (Mais escalavel)
+        cachedEventSearchService.indexNewEvent(savedEvent);
+
+        return savedEvent;
     }
 
     @Override

@@ -42,4 +42,11 @@ public class CachedEventSearchService {
 
         return eventRepository.findAllById(ids);
     }
+
+    public void indexNewEvent(Event event) {
+        trie.insert(event.getTitle(), event.getId());
+
+        String prefix = event.getTitle().substring(0, Math.min(3, event.getTitle().length())).toLowerCase();
+        redisTemplate.delete("search:" + prefix);
+    }
 }

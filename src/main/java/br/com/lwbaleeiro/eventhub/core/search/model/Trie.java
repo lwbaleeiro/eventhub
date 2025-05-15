@@ -1,8 +1,6 @@
 package br.com.lwbaleeiro.eventhub.core.search.model;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Set;
 
 public class Trie {
